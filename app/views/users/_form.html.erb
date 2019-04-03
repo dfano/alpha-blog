@@ -1,0 +1,37 @@
+<div>
+	<div> 
+
+		<%= form_for @user do |f| %>
+
+		<div class="form-group row"> 
+			<%= f.label :username, for: "input", class: "control-form-lable col-sm-2" %>
+			<div class="col-sm-10">
+				<%= f.text_field :username, class: "form-control" , placeholder: "username", autofocus: true  %>				
+			</div>
+		</div>
+
+
+		<div class="form-group row"> 			
+			<%= f.label :email, for: "input", class: "control-form-lable col-sm-2" %>
+			<div class="col-sm-10">
+				<%= f.email_field :email, class: "form-control", placeholder: "email", autofocus: true%>
+			</div>	
+		</div>
+
+		<div class="form-group row"> 			
+			<%= f.label :password, for: "input", class: "control-form-lable col-sm-2" %>
+			<div class="col-sm-10">
+				<%= f.password_field :password, class: "form-control", placeholder: "password", autofocus: true%>
+			</div>	
+		</div>
+
+		<div class="form-group row">
+			<div class="col-sm-10 offset-sm-2">
+				<%= f.submit(@user.new_record? ? "Sign Up" : "Upate Account", class: "btn btn-primary btn-lg") %>
+			</div>
+		</div>
+
+
+		<% end %>
+	</div>
+</div>
